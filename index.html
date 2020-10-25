@@ -18,7 +18,14 @@
             <div id="navigation">
                 <div class="row">
                     <div class="col-sm-12 text-center">
-                    <h1>{{ appName}}</h1>
+                        <h1>{{ appName}}</h1>
+                    </div>
+                    <div>
+                        <ul>
+                            <template v-for="navLink in navLinks">
+                                <li><a :href="navLink.url">{{navLink.name}} </a></li>
+                            </template>
+                        </ul>
                     </div>
                 </div>
             </div>

@@ -45,6 +45,12 @@ new Vue({
 new Vue({
     el: '#navigation',
     data:{
-        appName: "Guest List"
+        appName: "Guest List",
+        navLinks: [
+            {name: "home", id: 1, url: "https://www.google.com/"},
+            {name: "upComing events", id: 2, url: "https://www.amazon.com/"},
+            {name: "Guest Benefits", id: 3, url: "https://www.ebay.com/"},
+            {name: "Latest News", id: 4, url: "https://www.facebook.com/"}
+        ]
     }
 })
