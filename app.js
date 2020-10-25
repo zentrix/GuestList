@@ -23,8 +23,8 @@ new Vue({
                 this.eventCapacityPercentage = this.guestName.length / (this.eventCapacity/100)
             }
         }, 
-        methodCall: function(){
-            this.appStyles.marginTop = "50px"
+        keyPressed: function(){
+            console.log("key pressed")
         }
     },
     computed:{ //computed properties
@@ -32,5 +32,15 @@ new Vue({
             console.log("computed")
             return this.guestName.sort()
         }
-    }
+    }, 
+    watch:{
+        guestName: function(data){
+            console.log("watch triggered")
+        }
+    }, 
+    filters: {
+        formatName: function(value) {
+            return value.slice(0,1).toUpperCase() + value.slice(1).toLowerCase()
+        }
+    }, 
 });

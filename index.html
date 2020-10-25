@@ -35,9 +35,8 @@
                         <p class="card-text">Add your name to the guest list for exclusive offers:</p>
             
                         <form class="form-inline" @submit.prevent="formSumitted">
-                            <input type="text" id="nameInput" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Jane Doe" v-model="newNameText">
+                            <input type="text" id="nameInput" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Jane Doe" v-model="newNameText" @keyUp.space="keyPressed">
                             <input type="submit" class="btn btn-primary"></input>
-                            <button @click="methodCall"> call Method</button>
                         </form>
                             {{newNameText}}
                         </div>
@@ -57,7 +56,7 @@
                         <div v-if="guestName.length > 0">
                             <div class="card-success rounded name-box" 
                                 v-for="name in sortName">
-                                {{name}}
+                                {{name | formatName}}
                             </div>
                         </div>
                         <div v-else>
