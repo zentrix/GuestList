@@ -1,10 +1,11 @@
-new Vue({
+var vm1 = new Vue({
     el: "#app", 
     data: {
         event: { // creation of event 
             eventDate: 'August 14th - 16th', //creation of properties
             eventTitle: 'Summer Festival!', 
-            eventDescription: "It's back! This years summer festival will be in the beautiful countryside featuring our best line up ever!"
+            eventDescription: "It's back! This years summer festival will be in the beautiful countryside featuring our best line up ever!",
+            signUpText:  "Add your name to the guest list for <em>exclusive</em> offers:"
         },
         newNameText: '',
         guestName: [], 
@@ -42,7 +43,7 @@ new Vue({
     }, 
 });
 
-new Vue({
+var vm2 = new Vue({
     el: '#navigation',
     data:{
         appName: "Guest List",
